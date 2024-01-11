@@ -18,7 +18,6 @@ dotenv.config();
 
 // routes
 app.use("/api/register", registerRoute);
-// app.use("/api/login", loginRoute);
 
 mongoose
   .connect(process.env.MONGO_URI, {

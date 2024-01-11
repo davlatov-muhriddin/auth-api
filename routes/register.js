@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
 
     res.cookie("token", token, { httpOnly: true });
 
-    res.send(newUser);
+    res.send({ newUser, token });
   } catch (error) {
     console.log(error);
   }
