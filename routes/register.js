@@ -14,7 +14,6 @@ router.post("/", async (req, res) => {
     }
 
     const newUser = await User.create(req.body);
-
     const token = generateJwtToken(newUser);
 
     res.cookie("token", token, { httpOnly: true });

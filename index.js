@@ -11,7 +11,12 @@ const app = express();
 // middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000", // Frontendning URL manzili
+    credentials: true,
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 
 dotenv.config();
