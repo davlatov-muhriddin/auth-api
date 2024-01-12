@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000", // Frontendning URL manzili
+    origin: "https://auth-react-zeta.vercel.app/", // Frontendning URL manzili
     credentials: true,
   })
 );
